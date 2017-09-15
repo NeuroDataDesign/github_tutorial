@@ -42,7 +42,10 @@ When you have made local changes to a branch (ie, you have updated a file locall
 
 ```
 git status  # check what files you updated
+git pull  # for safety in case somebody else changed something
+git status  # to double check the files you need to change
 git add path/to/file1.ext path/to/file2.ext  ... # add all the files you meant to change that were shown by git status
+git status  # see the files that you just added
 git commit -m 'insert a descriptive message of what was changed'
 git push  # your changes will be updated in the remote
 ```
@@ -102,6 +105,7 @@ This command will merge the updates from master into your local branch, either w
 ```
 
 and these will be present anywhere that `git` can detect that two people updated the file in the same place. These need to be resolved manually (by selecting which lines from each function to retain or delete), and often it will be useful in this situation to ask your group leader or a more experienced git user for help if you don't know what to do (to make sure you don't accidentally delete anything useful). When you are finished manually merging, you can commit and push the changes back to your repository (following the above instructions for committing and pushing) and type `git continue` to continue merging the next file. Make sure to check `git status` when merging so that you can make sure you merge all the files successfully before pushing your changes. 
+
 
 # Making a Pull Request
 
